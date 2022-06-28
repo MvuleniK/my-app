@@ -1,12 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .homepage {
-    height: 100vh;
+    height: 60vh;
     font-weight: 100vw;
-    background: linear-gradient(122.19deg, #da2079 1.89%, #2a00d5 113.56%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    background-color:aliceblue;
   }
   
   .add-edit-input {
@@ -37,7 +57,7 @@
   
   .todo > h1 {
     width: 500px;
-    background-color: rgb(211, 211, 211);
+    background-color:#ffffff;
     padding: 5px 10px;
   }
   

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  createUserWithEmailAndPassword
-} from "firebase/auth";
+// you define the types of imports for authethecition
+import { signInWithEmailAndPassword,onAuthStateChanged,createUserWithEmailAndPassword} from "firebase/auth"; 
 import { auth } from "../firebase.js";
 import { useNavigate } from "react-router-dom";
 import "./Welcomepage.css";
+import "./Homepage";
 // import TodoSVG from '../assets/todo-svg.svg'
 
 export default function Welcome() {
@@ -25,7 +23,7 @@ export default function Welcome() {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        navigate("/homepage");
+        navigate("/Homepage");
       }
     });
   }, []);
@@ -41,7 +39,7 @@ export default function Welcome() {
   const handleSignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        navigate("/homepage");
+        navigate("/Homepage");
       })
       .catch((err) => alert(err.message));
   };
@@ -62,13 +60,13 @@ export default function Welcome() {
       registerInformation.password
     )
       .then(() => {
-        navigate("/homepage");
+        navigate("/Homepage");
       })
       .catch((err) => alert(err.message));
   };
 
   return (
-    <div className="welcome">
+    <div className=" welcome ">
     {/* <img src={TodoSVG} className="todo-svg" /> */}
       <h1>Todo-List</h1>
       <div className="login-register-container">
